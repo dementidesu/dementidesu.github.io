@@ -19,12 +19,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	
 	
 	
-	<audio autoplay loop>
+	<audio id="backgroundMusic" loop>
+    		<source src="coward.mp3" type="audio/mpeg">
+    		Your browser does not support the audio element.
+  	</audio>
 
-
-		<source src="coward.mp3" type="audio/mpeg">
-		If you're reading this, audio isn't supported. 
-	</audio>
+  	<script>
+    		document.addEventListener('DOMContentLoaded', function() {
+      			var audio = document.getElementById('backgroundMusic');
+      			audio.play().catch(function(error) {
+        			console.error('Autoplay prevented:', error);
+        			// You might want to add a user interaction (like a button click)
+        			// to trigger audio.play() if autoplay consistently fails.
+      			});
+    		});
+  	</script>
 	
 	<div class="wrap">
 		<div class="content officina">
