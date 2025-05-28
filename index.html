@@ -20,21 +20,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 	
 	
-	<audio id="coward" loop>
+	
+	<audio controls autoplay loop>
+
+
 		<source src="coward.mp3" type="audio/mpeg">
 		If you're reading this, audio isn't supported. 
 	</audio>
-	
-	<script>
-    		document.addEventListener('DOMContentLoaded', function() {
-      			var audio = document.getElementById('coward');
-      			audio.play().catch(function(error) {
-        			// Autoplay was prevented.
-        			// You might want to add a button for the user to manually play the audio.
-        			console.log('Autoplay prevented:', error);
-      			});
-    		});
-  	</script>
 	
 	<div class="wrap">
 		<div class="content officina">
